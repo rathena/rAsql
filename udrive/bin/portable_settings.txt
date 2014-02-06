@@ -1,0 +1,9 @@
+LastSessions<|||>1<|||>rAthena
+LastActiveSession<|||>1<|||>rAthena
+Servers\rAthena\Host<|||>1<|||>localhost
+Servers\rAthena\User<|||>1<|||>ragnarok
+Servers\rAthena\Password<|||>1<|||>78676D74677875716
+Servers\rAthena\Port<|||>1<|||>3306
+Servers\rAthena\NetType<|||>3<|||>0
+Servers\rAthena\Compressed<|||>3<|||>1
+Servers\rAthena\lastUsedDB<|||>1<|||>ragnarok
