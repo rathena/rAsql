@@ -11,17 +11,17 @@ rem ## Save return path
 pushd %~dp0
 
 rem ## Check to see if already stopped
-if NOT exist udrive\data\mysql_mini.pid goto :NOTSTARTED
+if NOT exist udrive\data\%COMPUTERNAME%.pid goto :NOTSTARTED
 
 rem ## It exists is it running
-SET /P pid=<udrive\data\mysql_mini.pid
+SET /P pid=<udrive\data\%COMPUTERNAME%.pid
 netstat -anop tcp | FIND /I " %pid%" >NUL
 IF ERRORLEVEL 1 goto :NOTRUNNING
 IF ERRORLEVEL 0 goto :RUNNING 
 
 :NOTRUNNING
 rem ## Not shutdown using mysql_stop.bat hence delete file
-del udrive\data\mysql_mini.pid 
+del udrive\data\%COMPUTERNAME%.pid 
 
 :NOTSTARTED
 rem ## Check for another server on this MySQL port
@@ -53,7 +53,7 @@ rem ## Save drive letter to file. Used by mysql_stop.bat
 rem ## Start server
 %Disk%:
 :start \bin\mysqld-opt.exe --defaults-file=/bin/my-small.cnf
-start \bin\mysqld-opt.exe --standalone
+start \bin\mysqld.exe --no-defaults
 
 rem ## Start HeidiSQL. Rem next line to disable 
 start \bin\heidisql.exe

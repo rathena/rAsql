@@ -1,0 +1,7 @@
+2018-04-27 11:09:47 11768 [Note] Reading of all Master_info entries succeded
+2018-04-27 11:09:47 11768 [Note] Added new Master_info '' to hash table
+2018-04-27 11:09:47 11768 [Note] \bin\mysqld.exe: ready for connections.
+Version: '10.2.14-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2018-04-27 11:12:14 12692 [Note] \bin\mysqld.exe (initiated by: root[root] @ localhost [::1]): Normal shutdown
+2018-04-27 11:12:14 15016 [Note] InnoDB: FTS optimize thread exiting.
+2018-04-27 11:12:14 12692 [Note] Event Scheduler: Purging the queue. 0 events
