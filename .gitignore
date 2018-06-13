@@ -1,0 +1,6 @@
+udrive/data/aria_log*
+udrive/data/ib_logfile*
+udrive/data/ibdata*
+udrive/data/multi-master.info
+udrive/data/*.pid
+udrive/data/*.err

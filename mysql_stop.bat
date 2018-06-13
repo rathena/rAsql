@@ -11,17 +11,17 @@ rem ## Save return path
 pushd %~dp0
 
 rem ## Check to see if already stopped
-if NOT exist udrive\data\mysql_mini.pid goto :ALREADYKILLED
+if NOT exist udrive\data\%COMPUTERNAME%.pid goto :ALREADYKILLED
 
 rem ## It exists is it running
-SET /P pid=<udrive\data\mysql_mini.pid
+SET /P pid=<udrive\data\%COMPUTERNAME%.pid
 netstat -anop tcp | FIND /I " %pid%" >NUL
 IF ERRORLEVEL 1 goto :NOTRUNNING
 IF ERRORLEVEL 0 goto :RUNNING 
 
 :NOTRUNNING
 rem ## Not running clean-up
-del udrive\data\mysql_mini.pid 
+del udrive\data\%COMPUTERNAME%.pid 
 goto :ALREADYKILLED
 
 rem ## It is running so shut server down
@@ -30,7 +30,7 @@ rem ## Getdrive letter
 SET /P Disk=<udrive\data\drive.txt
 
 rem ## Remove pid file server was closed
-del udrive\data\mysql_mini.pid
+del udrive\data\%COMPUTERNAME%.pid
 
 rem ## Remove disk file
 del udrive\data\drive.txt
